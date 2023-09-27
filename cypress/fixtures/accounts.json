@@ -1,0 +1,59 @@
+{
+    "login_info" : {
+        "account_number": "2104308",
+        "email": "yyn@sew.com",
+        "password": "iyxgqjzg"
+    },
+    "second_login_info": {
+        "account_number": "1775790",
+        "password": "rsuiuray"
+    },
+    
+    "third_login_info": {
+        "account_number": "131029",
+        "password": "bubba"
+    },
+    
+    "fourth_login_info": {
+        "account_number": "1850136",
+        "password" : "12345678"
+    },
+    
+    "points_login_info": {
+        "account_number": "bubba",
+        "password": "bubba"
+    },
+    
+    "dev_login_info": {
+        "account_number":"1646231",
+        "password": "12121212"
+    },
+    
+    "login_info_vuejs": {
+        "account_number" : "1757325",
+        "password" : "12345678"
+    },
+    
+    "forgot_info": {
+        "email" : "resetpasswordtest@pacificdev.com",
+        "accountNumber": "1773647",
+        "password" : "test@1234"
+    },
+    "wrong_forgot_info": {
+        "email" : "passwordtesthx@pacificdev.com",
+        "accountNumber": "0000000"
+    },
+    
+    "update_profile_info": {
+        "email" : "testupdateprofile@pacficdev.com",
+        "account_number" : "1798711",
+        "password": "123456789"
+    },
+    
+    "security_profile_info": {
+        "email" : "testaccountforsecurity@gmail.com",
+        "account_number": "2035309",
+        "password" : "12345678",
+        "password2": "87654321"
+    }
+}

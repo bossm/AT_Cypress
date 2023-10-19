@@ -17,10 +17,14 @@ describe('template spec', () => {
     }
 
     function check_matomo(actual, expected) {
-        for (var prop in actual) {
-            cy.log(prop)
-            if(prop in keys_to_check){
+        for (var prop in expected) {
+
+            if(keys_to_check.includes(prop)){
+                    cy.log(prop)
+                cy.log(actual[prop])
+                cy.log(expected[prop])
                 if(actual[prop]!==expected[prop]){
+                    cy.log('error')
                     cy.log(actual[prop])
                     cy.log(expected[prop])
                     return false

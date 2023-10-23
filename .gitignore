@@ -128,3 +128,14 @@ yarn-error.log*
 cypress/videos
 cypress/screenshots
 .nyc_output
+
+# End to End Tests
+dist/
+node_modules/
+obj/
+logs/
+*.log
+*.txt
+testresults/
+screenshots/
+package-lock.json

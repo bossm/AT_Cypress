@@ -12,7 +12,7 @@ describe('Join API test', ()=>{
         
     });
 
-    it("Successful join with API", ()=>{
+    it("Successful join.json with API", ()=>{
 
         let email = rd.generateEmail();
         const jsonData = {
@@ -49,7 +49,7 @@ describe('Join API test', ()=>{
           });
     });
 
-    it("Missing fields in join API", ()=>{
+    it("Missing fields in join.json API", ()=>{
         const data = {
           FirstName: 'test',
             LastName: 'test',
@@ -78,7 +78,7 @@ describe('Join API test', ()=>{
         });
     });
 
-    it("Existing account join API", ()=>{
+    it("Existing account join.json API", ()=>{
         let email = rd.generateEmail()
         const jsonData = {
             FirstName: 'test',

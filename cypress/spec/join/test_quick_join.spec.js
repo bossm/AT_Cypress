@@ -35,7 +35,7 @@ describe("Quick Join Tests", ()=>{
     });
     // TEST #1
     it("Successful Quick Join", ()=>{
-        cy.visit('join/quickjoin');
+        cy.visit('join.json/quickjoin');
         let isAddressRequired = step1();
         if (isAddressRequired){
             cy.get(loc.quick_join.address).should('be.visible').type("test");
@@ -78,7 +78,7 @@ describe("Quick Join Tests", ()=>{
     });
     // TEST #2
     it("Test Quick Join back button", ()=>{
-        cy.visit('join/quickjoin');
+        cy.visit('join.json/quickjoin');
         step1();
         cy.get(loc.quick_join.back).should('be.visible').click({ multiple: true , force:true});
         cy.get(loc.quick_join.first_name).should('be.visible');
@@ -89,14 +89,14 @@ describe("Quick Join Tests", ()=>{
         cy.get(loc.quick_join.continue).should('be.visible');
     });
     // TEST #3
-    it("Quick join field validation", ()=>{
+    it("Quick join.json field validation", ()=>{
         let inputs = [
              ["first"],
              ["last"],
              ['test@test.com', '  iii  ii', 'tests@test', 'teststest.com'],
              [data.phone]
         ];
-        cy.visit('join/quickjoin');
+        cy.visit('join.json/quickjoin');
         
         cy.get(loc.quick_join.form_field).each(($el, index) => {
             let test_case = inputs[index];
@@ -110,7 +110,7 @@ describe("Quick Join Tests", ()=>{
     });
     // TEST #5
     it("Successful Quick Join Canada", ()=>{
-        cy.visit('join/quickjoin');
+        cy.visit('join.json/quickjoin');
         let addressRequired = step1_canada();
         if (addressRequired){
             cy.get(loc.quick_join.city).should('be.visible').type('test');
@@ -138,8 +138,8 @@ describe("Quick Join Tests", ()=>{
         }
     });
     // TEST #6
-    it("Quick join password validation", ()=>{
-        cy.visit('join/quickjoin');
+    it("Quick join.json password validation", ()=>{
+        cy.visit('join.json/quickjoin');
         let isAddressRequired = step1();
         if (isAddressRequired){
             cy.get(loc.quick_join.address).type("test");

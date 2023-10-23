@@ -9,9 +9,10 @@ describe("Quick Join Tests", ()=>{
         cy.get(loc.quick_join.last_name).type(data.last_name);
         cy.get(loc.quick_join.email).type(data.email);
         cy.get(loc.quick_join.phone).type(data.phone);
-        let length = cy.get(loc.quick_join.step_progress_bar).length;
+        let length
+        cy.get(loc.quick_join.step_progress_bar).then((list) => { length=list.length });
         cy.get(loc.quick_join.continue).click();
-        return (length == 3)?false:true;
+        return (length != 3);
  
     }
 
@@ -22,9 +23,10 @@ describe("Quick Join Tests", ()=>{
         cy.get(loc.quick_join.phone_country).click();
         cy.get(loc.quick_join.canada).click();
         cy.get(loc.quick_join.phone).type(data.phone);
-        let length = cy.get(loc.quick_join.step_progress_bar).length;
+        let length
+        cy.get(loc.quick_join.step_progress_bar).then((list) => { length=list.length });
         cy.get(loc.quick_join.continue).click();
-        return (length == 3)?false:true;
+        return (length != 3);
     }
 
     before(()=>{

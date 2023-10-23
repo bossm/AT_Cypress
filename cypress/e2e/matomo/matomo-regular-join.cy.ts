@@ -1,7 +1,16 @@
 /// <reference types="cypress-xpath" />
+///<reference types="Cypress"/>
 import {generalFunctions} from "../../actions/general-functions.actions";
 import {baseActions} from "../../actions/base-actions.actions";
-import matomo_info from '../../locators/matomo-info.json';
+import matomo_info from '../../fixtures/matomo-info.json';
+
+let loc;
+
+before(() => {
+    cy.fixture('locators.json').then((d) => {
+        loc = d;
+    });
+});
 
 describe('Check Matomo existence', () => {
     it('Check Matomo in Regular Join', () => {
